@@ -1,0 +1,19 @@
+# Allowed skill tags. Use them in src/cv.md as trailing tokens on a bullet: "... text #python #aws"
+# The build fails on any tag not listed here.
+- ai
+- python
+- sql
+- r
+- bash
+- aws
+- cloud
+- ml
+- etl
+- infra
+- devops
+- leadership
+- teaching
+- finance
+- health
+- nlp
+- web

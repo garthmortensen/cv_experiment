@@ -1,0 +1,49 @@
+:root {
+  --fg: #1d2330; --muted: #5b6475; --bg: #fff; --accent: #1f5fbf;
+  --hit: #fff3c4; --line: #e3e6ec; --chip: #eef2f8;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --fg: #e4e7ee; --muted: #9aa3b5; --bg: #14171d; --accent: #7fb0ff;
+          --hit: #4a3f14; --line: #2a2f3a; --chip: #222833; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 52rem; margin: 0 auto; padding: 1rem 1.25rem 4rem; }
+a { color: var(--accent); }
+h1 { margin: 1rem 0 .25rem; font-size: 2rem; }
+h2 { margin-top: 2rem; padding-bottom: .2rem; border-bottom: 1px solid var(--line); font-size: 1.3rem; }
+h3 { margin: 1.4rem 0 .2rem; font-size: 1.1rem; }
+h4 { margin: 1rem 0 .2rem; font-size: 1rem; }
+li { margin: .2rem 0; }
+
+#toolbar { position: sticky; top: 0; z-index: 10; background: var(--bg);
+  border-bottom: 1px solid var(--line); padding: .5rem 1.25rem; }
+#toolbar .row { max-width: 52rem; margin: 0 auto; display: flex; flex-wrap: wrap;
+  gap: .35rem; align-items: center; }
+#toolbar .row + .row { margin-top: .35rem; }
+#toolbar .label { color: var(--muted); font-size: .8rem; text-transform: uppercase;
+  letter-spacing: .05em; margin-right: .25rem; }
+#toolbar .sep { width: 1px; height: 1.2rem; background: var(--line); margin: 0 .3rem; }
+#toolbar button, #toolbar a { font: inherit; font-size: .85rem; padding: .15rem .6rem;
+  border: 1px solid var(--line); border-radius: 999px; background: var(--chip);
+  color: var(--fg); cursor: pointer; text-decoration: none; }
+#toolbar [aria-pressed="true"] { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+body[data-view="recruiter"] #tagbar { display: none; }
+
+details.detail { margin: .5rem 0 .75rem; border-left: 3px solid var(--line); padding-left: .75rem; }
+details.detail > summary { cursor: pointer; color: var(--accent); font-weight: 600; font-size: .95rem; }
+details.detail[open] > summary { margin-bottom: .25rem; }
+
+/* tag highlighting */
+body.filtering li:has(> [data-tags]), body.filtering p:has(> [data-tags]) { opacity: .4; transition: opacity .15s; }
+body.filtering .hit { opacity: 1 !important; background: var(--hit); border-radius: 3px; }
+
+@media print {
+  #toolbar { display: none; }
+  body { font-size: 11pt; }
+  main { max-width: none; padding: 0; }
+  details.detail > summary { list-style: none; color: var(--fg); }
+  a { color: inherit; text-decoration: none; }
+  body.filtering * { opacity: 1 !important; background: none !important; }
+}
