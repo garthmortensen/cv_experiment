@@ -1,5 +1,5 @@
 -- Pandoc filter for the CV.
---  * ::: {.detail summary="..."} blocks: dropped for print formats, <details> for HTML.
+--  * <details class="detail"> blocks: dropped for print formats, kept as-is for HTML.
 --  * Trailing "#tag" tokens on paragraphs/bullets: validated against tags.yml,
 --    stripped for print formats, turned into data-tags spans for HTML.
 
@@ -64,19 +64,23 @@ local function tag_block(el)
   return el
 end
 
-local function escape(s)
-  return (s:gsub("&", "&amp;"):gsub("<", "&lt;"):gsub(">", "&gt;"):gsub('"', "&quot;"))
-end
-
-local function detail(el)
-  if not el.classes:includes("detail") then return nil end
-  if not is_html then return {} end
-  local summary = el.attributes["summary"] or "More"
-  local out = { pandoc.RawBlock("html",
-    '<details class="detail"><summary>' .. escape(summary) .. "</summary>") }
-  for _, b in ipairs(el.content) do table.insert(out, b) end
-  table.insert(out, pandoc.RawBlock("html", "</details>"))
-  return out
+-- Print formats: drop everything between <details ...> and </details>.
+-- HTML keeps the raw tags as written.
+local function drop_details(doc)
+  if is_html then return doc end
+  local out, inside = pandoc.List(), false
+  for _, b in ipairs(doc.blocks) do
+    local raw = b.t == "RawBlock" and b.format:match("html") and b.text or ""
+    if raw:match("^%s*<details") then
+      inside = true
+    elseif raw:match("^%s*</details>") then
+      inside = false
+    elseif not inside then
+      out:insert(b)
+    end
+  end
+  doc.blocks = out
+  return doc
 end
 
 local function check(doc)
@@ -90,6 +94,5 @@ end
 
 return {
   { Para = tag_block, Plain = tag_block },
-  { Div = detail },
-  { Pandoc = check },
+  { Pandoc = function(doc) return check(drop_details(doc)) end },
 }

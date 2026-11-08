@@ -12,6 +12,8 @@
   #toolbar .label { color: var(--muted); font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; margin-right: .25rem; }
   #toolbar .sep { width: 1px; height: 1.2rem; background: var(--line); margin: 0 .3rem; }
   #tagbar { margin-top: .35rem; }
+  /* README links to this very site; hide that line here */
+  main p:has(> a[href*="github.io/cv_experiment"]) { display: none; }
   body[data-view="recruiter"] #tagbar { display: none; }
 </style>
 <script defer src="assets/cv.js"></script>

@@ -1,5 +1,6 @@
 # Local + CI build. Requires pandoc, pdflatex, poppler-utils (pdfinfo/pdftotext).
-SRC       := src/cv.md
+SRC       := README.md
+TITLE     := Garth Mortensen — CV
 OUT       := build
 NAME      := cv_garthmortensen
 FILTER    := --lua-filter=scripts/cv.lua
@@ -12,7 +13,7 @@ all: site pdf docx check
 site:
 	mkdir -p $(OUT)/site
 	pandoc $(SRC) $(FILTER) -t html5 --standalone --section-divs \
-	  --template=site/template.html \
+	  --template=site/template.html -M pagetitle="$(TITLE)" \
 	  $(if $(GOATCOUNTER),-M goatcounter=$(GOATCOUNTER)) -o $(OUT)/site/index.html
 	cp -r site/assets $(OUT)/site/
 
