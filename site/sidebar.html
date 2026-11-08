@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>$pagetitle$</title>
+<link rel="stylesheet" href="assets/base.css">
+<style>
+  /* Pandoc --section-divs wraps each heading in <section id=...>; lay them out on a grid. */
+  main { max-width: 64rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+  section.level1 { display: grid; gap: 0 2.5rem; grid-template-columns: minmax(0, 1fr) 17rem;
+    grid-template-areas: "title side" "lead side" "exp side" "proj side"; }
+  section.level1 > h1 { grid-area: title; }
+  section.level1 > p { grid-area: title; align-self: end; margin-top: 2.6rem; font-size: .9rem; color: var(--muted); }
+  #data-science-engineer { grid-area: lead; }
+  #experience { grid-area: exp; }
+  #projects { grid-area: proj; }
+  aside { grid-area: side; font-size: .9rem; border-left: 1px solid var(--line); padding-left: 1.5rem; }
+  #data-science-engineer > ul { grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); }
+  aside h2 { margin-top: 1.25rem; }
+  aside h2:first-of-type { margin-top: 0; }
+  aside ul { list-style: none; padding: 0; }
+  aside li { margin: .4rem 0; }
+  @media (max-width: 48rem) {
+    section.level1 { grid-template-columns: 1fr; grid-template-areas: "title" "lead" "exp" "proj" "side"; }
+    aside { border: 0; padding: 0; }
+  }
+</style>
+<script defer src="assets/cv.js"></script>
+<script>
+  // Move Education + Skills into the sidebar; pure DOM move, no content duplication.
+  addEventListener("DOMContentLoaded", () => {
+    const aside = document.querySelector("aside");
+    document.querySelector("section.level1").appendChild(aside);
+    ["#education", "#skills"].forEach((id) => aside.appendChild(document.querySelector(id)));
+  });
+</script>
+$if(goatcounter)$
+<script data-goatcounter="https://$goatcounter$.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+$endif$
+</head>
+<body>
+<main>
+$body$
+<aside>
+  <p class="actions">
+    <button type="button" data-expand-all>Show all details</button>
+    <button type="button" data-collapse-all>Hide details</button>
+    <a href="https://github.com/garthmortensen/cv_experiment/releases/latest/download/cv_garthmortensen.pdf">PDF</a>
+    <a href="https://github.com/garthmortensen/cv_experiment/releases/latest/download/cv_garthmortensen.docx">DOCX</a>
+  </p>
+</aside>
+</main>
+</body>
+</html>

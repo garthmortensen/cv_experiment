@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>$pagetitle$</title>
+<link rel="stylesheet" href="assets/base.css">
+<style>
+  main { max-width: 46rem; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
+  #toolbar { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line); padding: .5rem 1.25rem; }
+  #toolbar .actions { max-width: 46rem; margin: 0 auto; align-items: center; }
+  #toolbar .label { color: var(--muted); font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; margin-right: .25rem; }
+  #toolbar .sep { width: 1px; height: 1.2rem; background: var(--line); margin: 0 .3rem; }
+  #tagbar { margin-top: .35rem; }
+  body[data-view="recruiter"] #tagbar { display: none; }
+</style>
+<script defer src="assets/cv.js"></script>
+$if(goatcounter)$
+<script data-goatcounter="https://$goatcounter$.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+$endif$
+</head>
+<body>
+<nav id="toolbar" aria-label="CV view controls">
+  <div class="actions">
+    <span class="label">View</span>
+    <button type="button" data-view="recruiter" aria-pressed="true">Summary</button>
+    <button type="button" data-view="tech" aria-pressed="false">Full</button>
+    <span class="sep"></span>
+    <a href="https://github.com/garthmortensen/cv_experiment/releases/latest/download/cv_garthmortensen.pdf">PDF</a>
+    <a href="https://github.com/garthmortensen/cv_experiment/releases/latest/download/cv_garthmortensen.docx">DOCX</a>
+  </div>
+  <div class="actions" id="tagbar"><span class="label">Highlight</span></div>
+</nav>
+<main>
+$body$
+</main>
+</body>
+</html>
