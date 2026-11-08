@@ -1,8 +1,8 @@
 # Garth Mortensen — CV
 
-**Interactive CV:** <https://garthmortensen.github.io/cv/>
+**Interactive CV:** <https://garthmortensen.github.io/cv_experiment/>
 
-Download the latest version: [PDF](https://github.com/garthmortensen/cv/releases/latest/download/cv_garthmortensen.pdf) \| [DOCX](https://github.com/garthmortensen/cv/releases/latest/download/cv_garthmortensen.docx)
+Download the latest version: [PDF](https://github.com/garthmortensen/cv_experiment/releases/latest/download/cv_garthmortensen.pdf) \| [DOCX](https://github.com/garthmortensen/cv_experiment/releases/latest/download/cv_garthmortensen.docx)
 
 [GitHub](https://www.github.com/garthmortensen) \| [LinkedIn](https://www.linkedin.com/in/mortensengarth) \| <mortensengarth@hotmail.com>
 
