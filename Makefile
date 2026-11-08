@@ -7,8 +7,8 @@ FILTER    := --lua-filter=scripts/cv.lua
 # GoatCounter site code (e.g. make GOATCOUNTER=garthy); empty = no analytics
 GOATCOUNTER ?=
 
-.PHONY: all site pdf docx check clean
-all: site pdf docx check
+.PHONY: all site pdf docx md check clean
+all: site pdf docx md check
 
 site:
 	mkdir -p $(OUT)/site
@@ -26,6 +26,11 @@ pdf:
 docx:
 	mkdir -p $(OUT)
 	pandoc $(SRC) $(FILTER) -o $(OUT)/$(NAME).docx
+
+# Plain GitHub-flavored markdown, same content as the PDF/DOCX (no dropdowns or tags)
+md:
+	mkdir -p $(OUT)
+	pandoc $(SRC) $(FILTER) -t gfm --wrap=none -o $(OUT)/$(NAME).md
 
 check:
 	scripts/check.sh $(OUT)/$(NAME).pdf $(OUT)/$(NAME).docx

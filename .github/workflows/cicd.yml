@@ -32,7 +32,7 @@ jobs:
         run: make all GOATCOUNTER=${{ vars.GOATCOUNTER }}
 
       - name: Include PDF/DOCX in site
-        run: cp build/*.pdf build/*.docx build/site/
+        run: cp build/*.pdf build/*.docx build/*.md build/site/
 
       - uses: actions/upload-pages-artifact@v3
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
@@ -46,6 +46,7 @@ jobs:
           files: |
             build/cv_garthmortensen.pdf
             build/cv_garthmortensen.docx
+            build/cv_garthmortensen.md
 
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
