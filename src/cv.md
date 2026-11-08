@@ -8,9 +8,9 @@ pagetitle: Garth Mortensen — CV
 
 ## Data Science Engineer
 
-**Ten years shipping models into regulated production, now leading hands-on AI adoption with a human in the loop.** Full stack production-grade data scientist with strong software engineering background. Love for creative destruction: building pipelines, reducing complexity, and designing clean, maintainable architectures.
+**4+ years shipping models into regulated production, now leading hands-on human in the loop AI adoption.** Full stack production-grade data scientist with strong software engineering background. Love for creative destruction: building pipelines, reducing complexity, and designing clean, maintainable architectures.
 
-- **Production ML in regulated finance.** Own the orchestration platform behind congressionally mandated Dodd-Frank stress tests; productionalized mortgage and credit card risk models consumed by the Board of Governors. #finance #ml #infra
+- **Production ML in regulated finance.** Owned the orchestration platform behind congressionally mandated Dodd-Frank stress tests; productionalized credit risk models consumed by the Board of Governors. #finance #ml #infra
 - **AI enablement, human in the loop.** Took the Fed stress-testing program from a bare AWS Bedrock instance to a governed, measured, team-wide AI capability; built its first RAG system and agentic workflows. #ai #aws
 - **Platforms and people.** Technical partner to 120+ quantitative analysts across Python, SQL, R and Bash; mentored analysts into production contributors; 270+ hours teaching fintech. #leadership #teaching #python
 
@@ -29,10 +29,10 @@ pagetitle: Garth Mortensen — CV
 
 - **Infrastructure & platform.** Partnered with IT to configure and integrate Claude with the backend, working through netsec constraints; programmatically discovered available models via Swagger/OpenAPI spec; built Stress Testing's first RAG system over open source docs. #ai #infra
 - **Security and governance.** Designed AI guardrails using hook-based controls and policy-as-code (e.g. traversing directories), enforcing least-privilege for agents and requiring human approval for sensitive actions; encoded team structure and context into version-controlled files. #ai #devops
-- **Automation and dev productivity.** Built a Makefile-based installer to standardize and log Claude setup; authored reusable AI skills for code review, unit testing, and other data science digital assembly line steps, in a git distributed setup, with a human reviewing each step's output. #ai #devops
-- **Adoption and measurement.** Onboarded and trained colleagues, establishing a git-based workflow for community-contributed skills; created an adoption telemetry process (sessions launched, skill invocations, monthly) to track ROI and give leadership evidence. #ai #leadership
+- **Automation and dev productivity.** Built a Makefile-based installer to standardize and log Claude setup; authored reusable AI skills for code review, unit testing, and other data science digital assembly line steps, in a git distributed setup. #ai #devops
+- **Adoption and measurement.** Onboarded and trained colleagues, establishing a git-based workflow for community-contributed skills; created an adoption telemetry process (# sessions launched, skill invocations) to track ROI and give leadership evidence. #ai #leadership
 - **AI-assisted R&D.** Built an automated peer-review pipeline that evaluates academic research and deltas it against our champion models in a structured report for human reviewers. #ai #finance
-- **Code comprehension and knowledge transfer.** Developed a RAG-powered code annotation tool that matches code against a corpus of documentation and inserts "why" comments with page-level citations, once a developer reviews and accepts them. #ai
+- **Code comprehension and knowledge transfer.** Developed a RAG-powered code annotation tool that matches code against a corpus and inserts "why" comments with page-level citations, once a developer reviews and accepts them. #ai
 - **Code-doc alignment.** Built a tool which aligns code to docs, or downstream docs to code, via API calls to wiki pages and docx, proposing changes for human approval rather than applying them automatically. #ai
 
 :::
@@ -125,11 +125,11 @@ pagetitle: Garth Mortensen — CV
 ## Education
 
 - **St. Thomas University**, St. Paul · 2023 · Double MSc, Software Engineering and Data Science; certifications in AI and Big Data; GPA 3.9
-- **EDHEC Business School**, Nice · 2012 · MSc Finance
+- **EDHEC Business School**, France · 2012 · MSc Finance
 - **Hamline University**, St. Paul · 2007 · BA Economics
 
 ## Skills
 
-**Tech:** Python/R, git, databases (sql/nosql), ETL, linux (shell, RHEL), HPCs, permissions, APIs, cloud (AWS/Google), devops CI/CD, containers, integration, productionalization.
+**Tech:** Python/R, databases (sql/nosql), ETL, git, APIs, linux (bash), HPCs, cloud (AWS/Google), CI/CD, containers, 12 factor app.
 **[Certifications](https://github.com/garthmortensen/certifications):** MS Software Development, MS Databases, MS IT Networking, MS IT Security, MS HTML/CSS, AWS Cloud Practitioner, Graph SQL, Google Analytics IQ, Excel/VBA, Bloomberg Terminal.
-**Languages:** English, French, Mandarin Chinese (diminishing CEFR B2).
+**Languages:** English, French, Mandarin Chinese (CEFR B2).
