@@ -7,7 +7,7 @@
 - **Dropdowns:** wrap detail content in a `<details class="detail">` block. The `<summary>` line is the link text. Leave a blank line after `</summary>` so the markdown inside renders.
   - On GitHub and the website it is an expandable section.
   - In the PDF and DOCX it is left out.
-- **Tags:** end a bullet with `#tags`, for example `#ai #aws`. The website's Highlight chips are built from them. Every tag must be listed in `tags.yml`, or the build fails. The tags are removed from the PDF and DOCX.
+- **Tags:** end a bullet with an HTML comment listing its tags, for example `<!-- ai aws -->`. GitHub doesn't display it. The website's Highlight chips are built from these comments. Every tag must be listed in `tags.yml`, or the build fails. The comments are removed from the PDF and DOCX.
 - **Page title:** set in the `Makefile` (`TITLE`), not in the README, because GitHub would display front matter as a table.
 
 ## Build
@@ -23,8 +23,8 @@ Requires `pandoc`, `pdflatex` and `poppler-utils`. Output goes to `build/`.
 |---|---|
 | `README.md` | the CV (source) |
 | `tags.yml` | allowed tags |
-| `scripts/cv.lua` | pandoc filter: validates and strips tags, drops dropdowns for PDF/DOCX |
-| `scripts/check.sh` | fails the build if the PDF is over 2 pages or a `#tag` leaks into PDF/DOCX |
+| `scripts/cv.lua` | pandoc filter: validates and strips tag comments, drops dropdowns for PDF/DOCX |
+| `scripts/check.sh` | fails the build if the PDF is over 2 pages or a tag leaks into PDF/DOCX |
 | `site/template.html`, `site/assets/` | website template, CSS and JS |
 | `.github/workflows/cicd.yml` | CI |
 

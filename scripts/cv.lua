@@ -1,7 +1,7 @@
 -- Pandoc filter for the CV.
 --  * <details class="detail"> blocks: dropped for print formats, kept as-is for HTML.
---  * Trailing "#tag" tokens on paragraphs/bullets: validated against tags.yml,
---    stripped for print formats, turned into data-tags spans for HTML.
+--  * Trailing "<!-- tag1 tag2 -->" comment on paragraphs/bullets: validated against
+--    tags.yml, removed for print formats, turned into data-tags spans for HTML.
 
 local is_html = FORMAT:match("html") ~= nil
 local tags_file = os.getenv("TAGS_FILE") or "tags.yml"
@@ -22,33 +22,25 @@ end
 
 local errors = {}
 
-local function is_tag(el)
-  return el and el.t == "Str" and el.text:match("^#[%w%-]+$") ~= nil
-end
-
 local function is_space(el)
   return el and (el.t == "Space" or el.t == "SoftBreak")
 end
 
--- Pop trailing tag tokens off an inline list; returns the list of tag names.
+-- Tags are a trailing HTML comment, invisible on GitHub: "text <!-- ai aws -->".
+-- Removes it from the inline list and returns the tag names.
 local function take_tags(inlines)
-  local tags = {}
-  while #inlines > 0 do
-    local last = inlines[#inlines]
-    if is_tag(last) then
-      local name = last.text:sub(2)
-      if not allowed[name] then
-        table.insert(errors, name)
-      end
-      table.insert(tags, 1, name)
-      inlines:remove(#inlines)
-    elseif is_space(last) and #tags > 0 then
-      inlines:remove(#inlines)
-    else
-      break
-    end
+  local last = inlines[#inlines]
+  if not (last and last.t == "RawInline" and last.format:match("html")) then
+    return {}
   end
-  -- drop whitespace left before the first tag
+  local body = last.text:match("^<!%-%-%s*(.-)%s*%-%->$")
+  if not body then return {} end
+  local tags = {}
+  for name in body:gmatch("[^%s,]+") do
+    if not allowed[name] then table.insert(errors, name) end
+    table.insert(tags, name)
+  end
+  inlines:remove(#inlines)
   while #inlines > 0 and is_space(inlines[#inlines]) do
     inlines:remove(#inlines)
   end
