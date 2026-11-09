@@ -6,7 +6,7 @@
 
 ## Data Science Engineer
 
-**4+ years shipping models into regulated production, now leading hands-on human in the loop AI adoption.** Full stack production-grade data scientist with strong software engineering background. Love for creative destruction: building pipelines, reducing complexity, and designing clean, maintainable architectures.
+**4+ years shipping models into regulated production, now leading AI adoption.** Full stack production-grade data scientist with strong software engineering background. Love for creative destruction: building pipelines, reducing complexity, and designing clean, maintainable architectures.
 
 - **Production ML in regulated finance.** Owned the orchestration platform behind congressionally mandated Dodd-Frank stress tests; productionalized credit risk models consumed by the Board of Governors. <!-- finance ml infra -->
 - **AI enablement.** Took the Fed stress-testing program from a bare AWS Bedrock instance to a governed, measured, team-wide AI capability; built its RAG system and agentic workflows. <!-- ai -->
