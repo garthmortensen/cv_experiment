@@ -9,7 +9,7 @@
 **4+ years shipping models into regulated production, now leading hands-on human in the loop AI adoption.** Full stack production-grade data scientist with strong software engineering background. Love for creative destruction: building pipelines, reducing complexity, and designing clean, maintainable architectures.
 
 - **Production ML in regulated finance.** Owned the orchestration platform behind congressionally mandated Dodd-Frank stress tests; productionalized credit risk models consumed by the Board of Governors. <!-- finance ml infra -->
-- **AI enablement, human in the loop.** Took the Fed stress-testing program from a bare AWS Bedrock instance to a governed, measured, team-wide AI capability; built its first RAG system and agentic workflows. <!-- ai aws -->
+- **AI enablement.** Took the Fed stress-testing program from a bare AWS Bedrock instance to a governed, measured, team-wide AI capability; built its RAG system and agentic workflows. <!-- ai -->
 - **Platforms and people.** Technical partner to 120+ quantitative analysts across Python, SQL, R and Bash; mentored analysts into production contributors; 270+ hours teaching fintech. <!-- leadership teaching python -->
 
 ## Experience
@@ -18,20 +18,19 @@
 
 **Sr. Production Data Scientist, National Stress Testing Program** · *Minneapolis, MN · 06/2022 -- Present*
 
-- **Own the production platform behind the Fed's stress tests, from risk-model code to infrastructure, and brought the program into AI with governance and a human in the loop.** <!-- infra ai leadership -->
-- Hired to productionalize credit risk models; expanded role to own infrastructure (Merkle DAG orchestration), shared libraries, user config, ETL, and production support for the stress testing program. <!-- infra etl finance -->
-- Led grassroots adoption of AI before formal leadership sponsorship: Claude on AWS Bedrock end to end (API calls, web proxy, netsec), the program's first RAG system, and prototyped agentic workflows for execution, retrieval, model configuration and decision support. <!-- ai aws -->
-- Every AI workflow keeps a person in control: analysts review and approve AI output before it informs analysis or enters the codebase. <!-- ai -->
+- **Owner of backend platform behind the Fed's stress tests, from back to front end code, and shepparded program into AI era.** <!-- infra ai leadership -->
+- Hired to productionalize credit risk models; expanded role to own infrastructure (Merkle DAG orchestration), shared libraries, shared env config, ETL, and production support for the stress testing program. <!-- infra etl finance -->
+- Led grassroots adoption of AI before formal leadership sponsorship: Claude on AWS Bedrock end to end (API calls, web proxy, netsec), the program's RAG system, and prototyped agentic workflows for execution, retrieval, model configuration and decision support. <!-- ai aws -->
 - Delivered 6 infrastructure releases across Python, SQL, R, and Bash; served 120+ quantitative analysts as the technical resource for Python, databases, Linux and Git. <!-- python sql r bash leadership -->
 
 <details class="detail">
 <summary>AI enablement in detail</summary>
 
-- **Infrastructure & platform.** Partnered with IT to configure and integrate Claude with the backend, working through netsec constraints; programmatically discovered available models via Swagger/OpenAPI spec; built Stress Testing's first RAG system over open source docs. <!-- ai infra -->
-- **Security and governance.** Designed AI guardrails using hook-based controls and policy-as-code (e.g. traversing directories), enforcing least-privilege for agents and requiring human approval for sensitive actions; encoded team structure and context into version-controlled files. <!-- ai devops -->
-- **Automation and dev productivity.** Built a Makefile-based installer to standardize and log Claude setup; authored reusable AI skills for code review, unit testing, and other data science digital assembly line steps, in a git distributed setup. <!-- ai devops -->
-- **Adoption and measurement.** Onboarded and trained colleagues, establishing a git-based workflow for community-contributed skills; created an adoption telemetry process (# sessions launched, skill invocations) to track ROI and give leadership evidence. <!-- ai leadership -->
-- **AI-assisted R&D.** Built an automated peer-review pipeline that evaluates academic research and deltas it against our champion models in a structured report for human reviewers. <!-- ai finance -->
+- **Infrastructure & platform.** Partnered with IT groups to configure and integrate Claude with the backend, working through netsec constraints; programmatically discovered available models via Swagger/OpenAPI spec; built Stress Testing's first RAG system from open source docs. <!-- ai infra -->
+- **Security and governance.** Designed AI guardrails using hook-based controls and policy-as-code (e.g. block dir traversal), enforcing least-privilege for agents and requiring human approval for sensitive actions. <!-- ai devops -->
+- **Automation and dev productivity.** Built a Makefile-based installer to standardize and log Claude setup; authored reusable AI skills for code review, unit testing, and other data science steps on the digital assembly line, in a git distributed setup. <!-- ai devops -->
+- **Adoption and measurement.** Onboarded and trained colleagues; created an adoption telemetry process (# sessions launched, skill invocations) to track ROI and give leadership evidence. <!-- ai leadership -->
+- **AI-assisted R&D.** Built an automated peer-review pipeline that evaluates academic research and deltas it against our champion models in a structured report for economist review. <!-- ai finance -->
 - **Code comprehension and knowledge transfer.** Developed a RAG-powered code annotation tool that matches code against a corpus and inserts "why" comments with page-level citations, once a developer reviews and accepts them. <!-- ai -->
 - **Code-doc alignment.** Built a tool which aligns code to docs, or downstream docs to code, via API calls to wiki pages and docx, proposing changes for human approval rather than applying them automatically. <!-- ai -->
 
@@ -42,8 +41,8 @@
 
 - Owned the orchestration platform responsible for congressionally mandated Dodd-Frank Stress Testing workflows, ensuring reliable execution of complex data pipelines. <!-- infra etl finance -->
 - Productionalized mortgage and credit card risk models and performed ad hoc analyses consumed by the Board of Governors. <!-- ml finance -->
-- Acted as Production's liaison and implementation partner to frontend, database, systems, and DevOps teams. <!-- devops leadership -->
-- Mentored analysts into contributing to the production codebase, improving team capability and knowledge sharing. <!-- leadership teaching -->
+- Acted as Production's liaison and implementation partner to frontend, database, systems, cloud, and DevOps teams. <!-- fullstack leadership -->
+- Mentored analysts into contributing to the production codebase, improving team capability. <!-- leadership teaching -->
 
 </details>
 
@@ -57,8 +56,8 @@
 <details class="detail">
 <summary>Teaching in detail</summary>
 
-- Taught programming to professionals ranging from sysadmins to finance directors. <!-- teaching python -->
-- Guided students in coding up ML models, blockchain implementations, Solidity smart contracts. <!-- teaching ml finance -->
+- Taught programming to professionals ranging from sysadmins to finance directors. <!-- teaching python sql -->
+- Guided students in AI/ML algos, blockchain implementations, Solidity smart contracts. <!-- teaching ml finance -->
 
 </details>
 
@@ -83,7 +82,7 @@
 
 - **Turned academic research and raw health data into CEO-level insights and the pipelines behind a next-gen research platform.** <!-- health etl -->
 - Replicated academic research on internal data to uncover actionable insights presented to the CEO. <!-- health -->
-- Built end-to-end data pipelines: API ingestion, transformation, validation, and visualization. <!-- etl python -->
+- Built end-to-end data pipelines: API ingestion, transformation, validation, and visualization. <!-- sql etl python -->
 
 <details class="detail">
 <summary>UHG in detail</summary>
