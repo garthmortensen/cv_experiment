@@ -29,6 +29,8 @@ end
 -- Tags are a trailing HTML comment, invisible on GitHub: "text <!-- ai aws -->".
 -- Removes it from the inline list and returns the tag names.
 local function take_tags(inlines)
+  -- ignore a trailing hard line break (two spaces at end of line) so tags still count
+  while #inlines > 0 and inlines[#inlines].t == "LineBreak" do inlines:remove(#inlines) end
   local last = inlines[#inlines]
   if not (last and last.t == "RawInline" and last.format:match("html")) then
     return {}

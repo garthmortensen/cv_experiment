@@ -138,6 +138,6 @@
 
 ## Skills
 
-**Tech:** Python/R, databases (sql/nosql), ETL, git, APIs, linux (bash), HPCs, cloud (AWS/Google), CI/CD, containers, 12 factor app.
-**[Certifications](https://github.com/garthmortensen/certifications):** MS Software Development, MS Databases, MS IT Networking, MS IT Security, MS HTML/CSS, AWS Cloud Practitioner, Graph SQL, Google Analytics IQ, Excel/VBA, Bloomberg Terminal.
+**Tech:** Python/R, databases (sql/nosql), ETL, git, APIs, linux (bash), HPCs, cloud (AWS/Google), CI/CD, containers, 12 factor app.  
+**[Certifications](https://github.com/garthmortensen/certifications):** MS Software Development, MS Databases, MS IT Networking, MS IT Security, MS HTML/CSS, AWS Cloud Practitioner, Graph SQL, Google Analytics IQ, Excel/VBA, Bloomberg Terminal.  
 **Languages:** English, French, Mandarin Chinese (CEFR B2).
