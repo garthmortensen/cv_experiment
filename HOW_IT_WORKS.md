@@ -19,6 +19,27 @@ make site GOATCOUNTER=garthy # include GoatCounter analytics
 
 Requires `pandoc`, `pdflatex` and `poppler-utils`. Output goes to `build/`.
 
+```mermaid
+flowchart TD
+    README["README.md<br/>(the CV)"] --> PANDOC["pandoc<br/>+ scripts/cv.lua filter"]
+    TAGS["tags.yml<br/>(allowed tags)"] -.validates tags.-> PANDOC
+    TEMPLATE["site/template.html<br/>+ site/assets/"] --> PANDOC
+
+    PANDOC --> SITE["Website (HTML)<br/>dropdowns and Highlight chips kept"]
+    PANDOC --> PDF["PDF"]
+    PANDOC --> DOCX["DOCX"]
+    PANDOC --> MD["MD"]
+
+    PDF --> CHECK{"scripts/check.sh<br/>PDF 2 pages or fewer?<br/>No tag leaks?"}
+    DOCX --> CHECK
+    CHECK -- pass --> OUT["build/"]
+    CHECK -- fail --> FAIL["Build fails"]
+    SITE --> OUT
+    MD --> OUT
+```
+
+In the PDF, DOCX and MD, the filter removes the tag comments and the dropdowns. The website keeps both.
+
 | Path | Purpose |
 |---|---|
 | `README.md` | the CV (source) |
