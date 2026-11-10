@@ -2,7 +2,7 @@
 
 \(612) 212-9519 \| Minneapolis, MN \| <mortensengarth@hotmail.com> \| [GitHub](https://www.github.com/garthmortensen) \| [LinkedIn](https://www.linkedin.com/in/mortensengarth)
 
-**Interactive version:** <https://garthmortensen.github.io/cv_experiment/> (short link: <https://tinyurl.com/garthcv>) \| Download: [PDF](https://github.com/garthmortensen/cv_experiment/releases/latest/download/cv_garthmortensen.pdf) \| [DOCX](https://github.com/garthmortensen/cv_experiment/releases/latest/download/cv_garthmortensen.docx) \| [MD](https://github.com/garthmortensen/cv_experiment/releases/latest/download/cv_garthmortensen.md)
+**Interactive version:** <https://garthmortensen.github.io/cv_experiment/> \| Download: [PDF](https://github.com/garthmortensen/cv_experiment/releases/latest/download/cv_garthmortensen.pdf) \| [DOCX](https://github.com/garthmortensen/cv_experiment/releases/latest/download/cv_garthmortensen.docx) \| [MD](https://github.com/garthmortensen/cv_experiment/releases/latest/download/cv_garthmortensen.md)
 
 ## Data Science Engineer
 
