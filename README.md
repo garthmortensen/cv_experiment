@@ -128,7 +128,7 @@
 
 ## Projects
 
-- **[Prism](https://github.com/garthmortensen/prism)** — a modernized Risk Adjustment platform replacing opaque "black box" legacy tools with a transparent, code-first architecture. Analysts parametrize models; AI agents interpret and process downstream results. <!-- ai python health -->
+- **[Prism](https://github.com/garthmortensen/prism)** — a modernized Risk Adjustment platform replacing opaque "black box" legacy tools with a transparent, code-first architecture. Analysts parametrize models; and (unimplemented TODO!) AI agents interpret and process downstream results. <!-- ai python health -->
 - **[SpilloverLab.com](https://www.spilloverlab.com)** — financial market spillover modeling with plain-English interpretations, dashboards, [REST](https://api.spilloverlab.com/redoc) and [GraphQL](https://api.spilloverlab.com/v1/graphql/) APIs. Microservices on cloud with CI/CD, [auto-documentation](https://timeseries-compute.readthedocs.io/en/latest/) and [test coverage](https://app.codecov.io/gh/garthmortensen/timeseries-api). <!-- python cloud devops finance -->
 
 ## Education
