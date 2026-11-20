@@ -4,7 +4,7 @@
 
 **Interactive version:** <https://garthmortensen.github.io/cv_experiment/> \| Download: [PDF](https://github.com/garthmortensen/cv_experiment/releases/latest/download/cv_garthmortensen.pdf) \| [DOCX](https://github.com/garthmortensen/cv_experiment/releases/latest/download/cv_garthmortensen.docx) \| [MD](https://github.com/garthmortensen/cv_experiment/releases/latest/download/cv_garthmortensen.md)
 
-## Data Science Engineer
+## Principal Data Scientist, Applied AI and Production ML
 
 **Data scientist who can deliver production models into regulated environment, now leading AI adoption.** Full stack production-grade data scientist with strong software engineering background. Love for creative destruction: building pipelines, reducing complexity, and designing clean, auditable, maintainable architectures.
 
@@ -18,7 +18,7 @@
 
 **Sr. Production Data Scientist, National Stress Testing Program** · *Minneapolis, MN · 06/2022 -- Present*
 
-- **Owner of backend platform behind ~95% of the Fed's stress test executions, from back to front end code, and shepparded program into AI era.** <!-- infra ai leadership -->
+- **Owner of backend platform behind ~95% of the Fed's stress test executions, from back to front end code, and shepherded program into AI era.** <!-- infra ai leadership -->
 - Hired to productionalize credit risk models; expanded role to own infrastructure (Merkle DAG orchestrator), shared libraries, shared env config, ETL, and production support for the stress testing program. <!-- infra etl finance -->
 - Led grassroots adoption of AI before formal leadership sponsorship: Claude on AWS Bedrock end to end (API calls, web proxy, netsec), the program's RAG system, and prototyped agentic workflows for execution, retrieval, model configuration and decision support. <!-- ai aws -->
 - Delivered infrastructure releases across Python, SQL, R, and Bash; served 120+ quantitative analysts as the technical resource for Python, databases, Linux and Git. <!-- python sql r bash leadership -->
@@ -128,12 +128,12 @@
 
 ## Projects
 
-- **[Prism](https://github.com/garthmortensen/prism)** — a modernized Risk Adjustment platform replacing opaque "black box" legacy tools with a transparent, code-first architecture. Analysts parametrize models; and (unimplemented TODO!) AI agents interpret and process downstream results. <!-- ai python health -->
+- **[Prism](https://github.com/garthmortensen/prism)** — a modernized Risk Adjustment platform replacing opaque "black box" legacy tools with a transparent, code-first architecture. Analysts parametrize models; and AI agents interpret and process downstream results. <!-- ai python health -->
 - **[SpilloverLab.com](https://www.spilloverlab.com)** — financial market spillover modeling with plain-English interpretations, dashboards, [REST](https://api.spilloverlab.com/redoc) and [GraphQL](https://api.spilloverlab.com/v1/graphql/) APIs. Microservices on cloud with CI/CD, [auto-documentation](https://timeseries-compute.readthedocs.io/en/latest/) and [test coverage](https://app.codecov.io/gh/garthmortensen/timeseries-api). <!-- python cloud devops finance -->
 
 ## Education
 
-- **St. Thomas University**, St. Paul · 2023 · Double MSc, Software Engineering and Data Science; certifications in AI and Big Data; GPA 3.9
+- **University of St. Thomas**, St. Paul · 2023 · Double MSc, Software Engineering and Data Science; certifications in AI and Big Data; GPA 3.9
 - **EDHEC Business School**, France · 2012 · MSc Finance
 - **Hamline University**, St. Paul · 2007 · BA Economics
 
